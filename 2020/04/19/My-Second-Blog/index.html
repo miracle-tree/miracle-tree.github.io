@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="https://github.com/miracle-tree">
   <title>My Second Blog | MT&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在下刘某的第一个博客 听说 这是 列表   听说这是引用那就再来一段   这是文本框? 这是加粗? 这是斜体+加粗直达百度  1System.out.println(&quot;hello world&quot;)!">
+  <meta name="description" content="在下刘某的第一个博客 听说 这是 列表   听说这是引用那就再来一段   这是文本框? 这是加粗? 这是斜体+加粗直达百度  1System.out.println(&quot;hello world&quot;)!  12345val conf:SparkConf &#x3D; new SparkConf().setMaster(&quot;local[*]&quot;).setAppName(&quot;I&#39;m so sad&quot;)val sc:Spark">
 <meta property="og:type" content="article">
 <meta property="og:title" content="My Second Blog">
 <meta property="og:url" content="https://github.com/miracle-tree/2020/04/19/My-Second-Blog/index.html">
 <meta property="og:site_name" content="MT&#39;s Blog">
-<meta property="og:description" content="在下刘某的第一个博客 听说 这是 列表   听说这是引用那就再来一段   这是文本框? 这是加粗? 这是斜体+加粗直达百度  1System.out.println(&quot;hello world&quot;)!">
+<meta property="og:description" content="在下刘某的第一个博客 听说 这是 列表   听说这是引用那就再来一段   这是文本框? 这是加粗? 这是斜体+加粗直达百度  1System.out.println(&quot;hello world&quot;)!  12345val conf:SparkConf &#x3D; new SparkConf().setMaster(&quot;local[*]&quot;).setAppName(&quot;I&#39;m so sad&quot;)val sc:Spark">
 <meta property="og:image" content="https://github.com/miracle-tree/2020/04/19/My-Second-Blog/snapshot.png">
 <meta property="article:published_time" content="2020-04-19T09:34:05.000Z">
-<meta property="article:modified_time" content="2020-04-21T10:23:20.379Z">
+<meta property="article:modified_time" content="2020-04-21T12:55:54.586Z">
 <meta property="article:author" content="miracle-tree">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://github.com/miracle-tree/2020/04/19/My-Second-Blog/snapshot.png">
@@ -191,6 +191,7 @@
 <hr>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="string">"hello world"</span>)!</span><br></pre></td></tr></table></figure>
 <p><img src="./snapshot.png" alt="snapshot"></p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> conf:<span class="type">SparkConf</span> = <span class="keyword">new</span> <span class="type">SparkConf</span>().setMaster(<span class="string">"local[*]"</span>).setAppName(<span class="string">"I'm so sad"</span>)</span><br><span class="line"><span class="keyword">val</span> sc:<span class="type">SparkContext</span> = <span class="keyword">new</span> <span class="type">SparkContext</span>(conf);</span><br><span class="line">sc.textFile(<span class="string">"./input/wordcount.txt"</span>).flatmap(_.split(<span class="string">" "</span>)).map(v=&gt;(v,<span class="number">1</span>)).reduceByKey(_+_).collect().foreach(println)</span><br><span class="line">sc.stop()</span><br><span class="line">println(<span class="string">s"我现在好郁闷，钱有没钱，工作又没工作，烦！"</span>);</span><br></pre></td></tr></table></figure>
 
       
 
