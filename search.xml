@@ -59,4 +59,10 @@
         <tag>consciousness feeling</tag>
       </tags>
   </entry>
+  <entry>
+    <title>04-28历程</title>
+    <url>/2020/04/28/04-28%E5%8E%86%E7%A8%8B/</url>
+    <content><![CDATA[<figure class="highlight scala"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> conf = <span class="keyword">new</span> <span class="type">SparkConf</span>().setAppName(<span class="string">"exacting day"</span>).setMaster(<span class="string">"local[4]"</span>)</span><br><span class="line"><span class="keyword">val</span> sc = <span class="keyword">new</span> <span class="type">SparkContext</span>(conf)</span><br><span class="line"><span class="keyword">val</span> reuslt : <span class="type">Array</span>[<span class="type">Tuple</span>[<span class="type">String</span>,<span class="type">Int</span>]] = sc.textFile(<span class="string">"./input/wc.txt"</span>).flatmap(_.split(<span class="string">" "</span>)).map(v=&gt;(v,<span class="number">1</span>)).reduceByKey(_+_).collect()</span><br><span class="line">println(result.mkstring(<span class="string">","</span>))</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
 </search>

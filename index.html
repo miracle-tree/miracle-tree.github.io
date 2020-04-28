@@ -155,6 +155,57 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-04-28历程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/28/04-28%E5%8E%86%E7%A8%8B/">04-28历程</a>
+    </h1>
+  
+
+        
+        <a href="/2020/04/28/04-28%E5%8E%86%E7%A8%8B/" class="archive-article-date">
+  	<time datetime="2020-04-28T13:25:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> conf = <span class="keyword">new</span> <span class="type">SparkConf</span>().setAppName(<span class="string">"exacting day"</span>).setMaster(<span class="string">"local[4]"</span>)</span><br><span class="line"><span class="keyword">val</span> sc = <span class="keyword">new</span> <span class="type">SparkContext</span>(conf)</span><br><span class="line"><span class="keyword">val</span> reuslt : <span class="type">Array</span>[<span class="type">Tuple</span>[<span class="type">String</span>,<span class="type">Int</span>]] = sc.textFile(<span class="string">"./input/wc.txt"</span>).flatmap(_.split(<span class="string">" "</span>)).map(v=&gt;(v,<span class="number">1</span>)).reduceByKey(_+_).collect()</span><br><span class="line">println(result.mkstring(<span class="string">","</span>))</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/28/04-28%E5%8E%86%E7%A8%8B/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-Desire" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
