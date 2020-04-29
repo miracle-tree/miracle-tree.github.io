@@ -150,7 +150,7 @@
 <p>There isn’t GitHub Pages site here </p>
 </blockquote>
 <hr>
-<p>&lt;!-more-&gt;</p>
+<a id="more"></a>
 <h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>在网上查阅了很多资料，原来是因为GitHub Pages中部分属性丢失，只需执行以下步骤即可：</p>
 <ol>
 <li>在Code模块添加README.md文件，随意内容即可</li>
