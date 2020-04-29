@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>My First Blog</title>
-    <url>/2020/04/19/My-First-Blog/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>Hadoop</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>My Second Blog</title>
     <url>/2020/04/19/My-Second-Blog/</url>
     <content><![CDATA[<h3 id="在下刘某的第一个博客"><a href="#在下刘某的第一个博客" class="headerlink" title="在下刘某的第一个博客"></a>在下刘某的第一个博客</h3><ul>
@@ -24,24 +16,6 @@
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println(<span class="string">"hello world"</span>)!</span><br></pre></td></tr></table></figure>
 <p><img src="./snapshot.png" alt="snapshot"></p>
 <figure class="highlight scala"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> conf:<span class="type">SparkConf</span> = <span class="keyword">new</span> <span class="type">SparkConf</span>().setMaster(<span class="string">"local[*]"</span>).setAppName(<span class="string">"I'm so sad"</span>)</span><br><span class="line"><span class="keyword">val</span> sc:<span class="type">SparkContext</span> = <span class="keyword">new</span> <span class="type">SparkContext</span>(conf);</span><br><span class="line">sc.textFile(<span class="string">"./input/wordcount.txt"</span>).flatmap(_.split(<span class="string">" "</span>)).map(v=&gt;(v,<span class="number">1</span>)).reduceByKey(_+_).collect().foreach(println)</span><br><span class="line">sc.stop()</span><br><span class="line">println(<span class="string">s"我现在好郁闷，钱有没钱，工作又没工作，烦！"</span>);</span><br></pre></td></tr></table></figure>
-]]></content>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/04/19/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 ]]></content>
   </entry>
   <entry>
@@ -66,18 +40,15 @@
 ]]></content>
   </entry>
   <entry>
-    <title>GitPage Error</title>
-    <url>/2020/04/29/GitPage-Error/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>write-in-Typora </title>
     <url>/2020/04/29/write-in-Typora/</url>
     <content><![CDATA[<h3 id="hello"><a href="#hello" class="headerlink" title="hello"></a>hello</h3><figure class="highlight scala"><table><tr><td class="code"><pre><span class="line">println(<span class="string">"hello wolrd"</span>)</span><br></pre></td></tr></table></figure>
 
 <p><img src="C:%5CUsers%5Ctree%5CDesktop%5Cgitpage-error.png" alt="hello"></p>
 <hr>
-<p>[直达百度]（<a href="https://baidu.com" target="_blank" rel="noopener">https://baidu.com</a>)</p>
+<p><a href="https://baidu.com" target="_blank" rel="noopener">直达百度</a></p>
+<a id="more"></a>
+
 <p> <em>u</em></p>
 <p><strong>U</strong></p>
 <p><strong><em>u</em></strong></p>
