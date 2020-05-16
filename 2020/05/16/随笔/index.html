@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/miracle-tree">
-  <title>Archives: 2020 | MT&#39;s Blog</title>
+  <title>随笔 | MT&#39;s Blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="MT&#39;s Blog">
-<meta property="og:url" content="https://github.com/miracle-tree/archives/2020/index.html">
+  <meta name="description" content="实时计算之我见 最近新入职了一家公司，从事的大数据开发工作，偏向实时计算这一块，主要采用的技术还是JStorm！虽然之前可能不是很了解，但是有接触过Spark、Flink等实时计算框架，JStorm可以说是这些框架的前身了，因此学起来也感受良多，体会到了后者基于前者改进的原因！   作为实时计算框架，他们都有相同要处理的东西，比如从环境来说，因为实时计算是用来处理大数据量的，不可能在单机上运行，因">
+<meta property="og:type" content="article">
+<meta property="og:title" content="随笔">
+<meta property="og:url" content="https://github.com/miracle-tree/2020/05/16/%E9%9A%8F%E7%AC%94/index.html">
 <meta property="og:site_name" content="MT&#39;s Blog">
+<meta property="og:description" content="实时计算之我见 最近新入职了一家公司，从事的大数据开发工作，偏向实时计算这一块，主要采用的技术还是JStorm！虽然之前可能不是很了解，但是有接触过Spark、Flink等实时计算框架，JStorm可以说是这些框架的前身了，因此学起来也感受良多，体会到了后者基于前者改进的原因！   作为实时计算框架，他们都有相同要处理的东西，比如从环境来说，因为实时计算是用来处理大数据量的，不可能在单机上运行，因">
+<meta property="article:published_time" content="2020-05-16T01:06:06.000Z">
+<meta property="article:modified_time" content="2020-05-16T01:07:20.888Z">
 <meta property="article:author" content="miracle-tree">
 <meta name="twitter:card" content="summary">
   
@@ -189,236 +193,192 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-随笔" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+    <h1 class="article-title" itemprop="name">
+      随笔
+    </h1>
+  
+
+
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2020/05/16/%E9%9A%8F%E7%AC%94/" class="archive-article-date">
         <time datetime="2020-05-16T01:06:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-16</time>
 </a>
 
-        </div>
-    	 
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/05/16/%E9%9A%8F%E7%AC%94/" target="_blank">随笔</a>
   
-    </h1>
-  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">1.2k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">4分</span>
+    </span>
+  </span>
+</div>
 
 
-        <div class="article-info info-on-right">
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="实时计算之我见"><a href="#实时计算之我见" class="headerlink" title="实时计算之我见"></a>实时计算之我见</h3><p>最近新入职了一家公司，从事的大数据开发工作，偏向实时计算这一块，主要采用的技术还是JStorm！虽然之前可能不是很了解，但是有接触过Spark、Flink等实时计算框架，JStorm可以说是这些框架的前身了，因此学起来也感受良多，体会到了后者基于前者改进的原因！<br><br><br>作为实时计算框架，他们都有相同要处理的东西，比如从环境来说，因为实时计算是用来处理大数据量的，不可能在单机上运行，因此能够进行计算的前提条件是能够在多台机器上并发执行一个任务：底层交互环境应运而生。<br><br><br>从宏观上来讲，其实都是相类似的，就是在用户提交之前，你得先保证有一个具备足够资源(CPU、内存、磁盘以及网络等)的集群，他们一般采用的都是主从结构，即集群中有一个Master节点，以及若个slave节点。他们有着很明确的分工：master节点一般用来管理slave节点，负责监听整个就集群的资源变化过程！比如刚开始搭建一个环境，基于底层的通信机制，所有的slave节点都会想master节点发送注册信息，以便master节点管理和维护，同时也方便用户查看整个集群的资源状况；同时在一个给定时间内，slave节点会定期向master节点汇报当前的资源状态以及任务运行详情，方便master管理(WebUI展示)。<br><br><br>当有了运行环境之后，我们需要考虑的就是从用户提交单个任务以后，如何正确的在一个集群的不同机器上协调完成这个任务！而这种协同工作在实时计算中表现为将一个整体的计算任务划分为多个Task子任务，然后由不同的机器领取执行，进而达到为多机器并发执行的效果。但是，由于任务的性质不同，以Spark为例，它的算子可以作为各任务抽象化的结果。它存在宽窄依赖一说，所谓宽依赖，指的是在一条完整的任务链中，下一个任务需要等到上一个任务中的所有Task子任务全部执行完成，才得以进行，比如GroupByKey算子；窄依赖，则相反，它无需考虑上一任务的执行状态，当接收的数据发送过来，直接就可以进行计算，比如Map算子。因此，基于此种特性，新兴的流式框架都会对此进行改良，比如利用窄依赖性质，直接依据任务链性质，将相同窄依赖的任务放置在同一台机器上执行，这样可以有效减少任务之间的消息传输量，有效提高计算效率。而因为宽依赖的存在，需要考虑宽依赖上下两层算子间数据的传递，因此衍生出了多种类型的数据交流方式：shuffle、forward、round-robin等等。<br><br><br>此外，由于实时计算的特殊性，如果单纯的只考虑对实时数据进行实时处理，那样能够产生的效益是有限的，实时计算更多的用于对某一个时间段数据的综合分析，因此可能需要维护一定时间内的数据总量，即状态。状态是指指定时间内所有接受数据量的保存结果，它可以根据实时的数据进行一个动态的改变。当使用实时计算时，指标的反映结果更多是依据状态来进行的，比如你要一个周期内总的交易额，它就是用状态来实现的，它不仅会增加新增的数据，而且会删除过期的数据(窗口以外)。状态在实时计算中是一个非常重要的概念，同时与它密切相关的还有窗口。以Flink为例，按照它的流式价值观，他认为所有数据都是流，只不过实时的是·一条无届流，而离线的是有界流。窗口就相当于给无界流限定了一个区间，开始与结束，但是它会随着时间进行变化。依据不同的维度，可以划分不同的窗口，比如依据时间以及滚动策略，可以划分为时间滑动窗口、时间滑动窗口以及会话窗口；依据事件数量可以划分为事件滚动窗口和事件滑动窗口。<br><br></p>
+
+    
+
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          miracle-tree
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://github.com/miracle-tree/2020/05/16/随笔/" title="随笔" target="_blank">https://github.com/miracle-tree/2020/05/16/随笔/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
-          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
 
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://github.com/miracle-tree/2020/05/16/%E9%9A%8F%E7%AC%94/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/29/GitHub-Pages%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%87%BA%E7%8E%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/" class="archive-article-date">
-        <time datetime="2020-04-29T02:14:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-29</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/29/GitHub-Pages%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%87%BA%E7%8E%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">GitHub Pages使用过程中出现的一些问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/29/GitHub-Pages%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%87%BA%E7%8E%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/" target="_blank">GitHub Pages使用过程中出现的一些问题</a>
-  
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">GitHub</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/29/write-in-Typora/" class="archive-article-date">
-        <time datetime="2020-04-29T02:02:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-29</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/29/write-in-Typora/" target="_blank">write-in-Typora </a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/28/04-28%E5%8E%86%E7%A8%8B/" class="archive-article-date">
-        <time datetime="2020-04-28T13:25:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-28</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/28/04-28%E5%8E%86%E7%A8%8B/" target="_blank">04-28历程</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/22/Desire/" class="archive-article-date">
-        <time datetime="2020-04-22T08:52:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-22</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/22/Desire/" target="_blank">Desire</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">consciousness feeling</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/19/My-Second-Blog/" class="archive-article-date">
-        <time datetime="2020-04-19T09:34:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-19</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/19/My-Second-Blog/" target="_blank">My Second Blog</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
 
 
           </div>
@@ -459,8 +419,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
