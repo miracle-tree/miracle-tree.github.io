@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/miracle-tree">
-  <title>04-28历程 | MT&#39;s Blog</title>
+  <title>缓存的几个常用使用场景 | MT&#39;s Blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="1234val conf &#x3D; new SparkConf().setAppName(&quot;exacting day&quot;).setMaster(&quot;local[4]&quot;)val sc &#x3D; new SparkContext(conf)val reuslt : Array[Tuple[String,Int]] &#x3D; sc.textFile(&quot;.&#x2F;input&#x2F;wc.txt&quot;).flatmap(_.split(&quot; &quot;)">
+  <meta name="description" content="1.1 配置缓存 自工作以来，已经逐渐介入了公司的几个项目，主要以中间件为主，因此涉及到需要存储很多DB配置。而公司现有的解决方案，是使用哈希表来进行保存：先从哈希表中获取，若不存在，则从数据库中读取，并加载进内存。通过缓存可以减少对数据库的访问次数，提高计算效率。同时采用netty组件，通过http请求动态的清除缓存，从而达到不停服更新配置的功能(需要注意锁)！  1 2 3 4 5 6 7 8">
 <meta property="og:type" content="article">
-<meta property="og:title" content="04-28历程">
-<meta property="og:url" content="https://github.com/miracle-tree/2020/04/28/04-28%E5%8E%86%E7%A8%8B/index.html">
+<meta property="og:title" content="缓存的几个常用使用场景">
+<meta property="og:url" content="https://github.com/miracle-tree/2020/06/21/%E7%BC%93%E5%AD%98%E7%9A%84%E5%87%A0%E4%B8%AA%E5%B8%B8%E7%94%A8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/index.html">
 <meta property="og:site_name" content="MT&#39;s Blog">
-<meta property="og:description" content="1234val conf &#x3D; new SparkConf().setAppName(&quot;exacting day&quot;).setMaster(&quot;local[4]&quot;)val sc &#x3D; new SparkContext(conf)val reuslt : Array[Tuple[String,Int]] &#x3D; sc.textFile(&quot;.&#x2F;input&#x2F;wc.txt&quot;).flatmap(_.split(&quot; &quot;)">
-<meta property="article:published_time" content="2020-04-28T13:25:25.000Z">
-<meta property="article:modified_time" content="2020-04-28T13:31:34.145Z">
+<meta property="og:description" content="1.1 配置缓存 自工作以来，已经逐渐介入了公司的几个项目，主要以中间件为主，因此涉及到需要存储很多DB配置。而公司现有的解决方案，是使用哈希表来进行保存：先从哈希表中获取，若不存在，则从数据库中读取，并加载进内存。通过缓存可以减少对数据库的访问次数，提高计算效率。同时采用netty组件，通过http请求动态的清除缓存，从而达到不停服更新配置的功能(需要注意锁)！  1 2 3 4 5 6 7 8">
+<meta property="article:published_time" content="2020-06-21T03:00:16.000Z">
+<meta property="article:modified_time" content="2020-06-21T03:01:14.087Z">
 <meta property="article:author" content="miracle-tree">
+<meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="MT&#39;s Blog" type="application/atom+xml">
@@ -193,14 +194,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-04-28历程" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-缓存的几个常用使用场景" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      04-28历程
+      缓存的几个常用使用场景
     </h1>
   
 
@@ -212,8 +213,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/04/28/04-28%E5%8E%86%E7%A8%8B/" class="archive-article-date">
-        <time datetime="2020-04-28T13:25:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-28</time>
+<a href="/2020/06/21/%E7%BC%93%E5%AD%98%E7%9A%84%E5%87%A0%E4%B8%AA%E5%B8%B8%E7%94%A8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/" class="archive-article-date">
+        <time datetime="2020-06-21T03:00:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-21</time>
 </a>
 
   
@@ -226,7 +227,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">41字</span>
+      <span class="post-count">849字</span>
     </span>
   </span>
 
@@ -235,7 +236,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">3分</span>
     </span>
   </span>
 </div>
@@ -246,7 +247,19 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> conf = <span class="keyword">new</span> <span class="type">SparkConf</span>().setAppName(<span class="string">"exacting day"</span>).setMaster(<span class="string">"local[4]"</span>)</span><br><span class="line"><span class="keyword">val</span> sc = <span class="keyword">new</span> <span class="type">SparkContext</span>(conf)</span><br><span class="line"><span class="keyword">val</span> reuslt : <span class="type">Array</span>[<span class="type">Tuple</span>[<span class="type">String</span>,<span class="type">Int</span>]] = sc.textFile(<span class="string">"./input/wc.txt"</span>).flatmap(_.split(<span class="string">" "</span>)).map(v=&gt;(v,<span class="number">1</span>)).reduceByKey(_+_).collect()</span><br><span class="line">println(result.mkstring(<span class="string">","</span>))</span><br></pre></td></tr></table></figure>
+    <h3 id="1-1-配置缓存"><a href="#1-1-配置缓存" class="headerlink" title="1.1 配置缓存"></a>1.1 配置缓存</h3><p>自工作以来，已经逐渐介入了公司的几个项目，主要以中间件为主，因此涉及到需要存储很多DB配置。而公司现有的解决方案，是使用哈希表来进行保存：先从哈希表中获取，若不存在，则从数据库中读取，并加载进内存。通过缓存可以减少对数据库的访问次数，提高计算效率。同时采用netty组件，通过http请求动态的清除缓存，从而达到不停服更新配置的功能(需要注意锁)！</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (logConditionCalculateConfigRela.containsKey(logConditionId)) &#123;</span><br><span class="line">	<span class="keyword">return</span> logConditionCalculateConfigRela.get(logConditionId);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">synchronized</span> (<span class="keyword">this</span>) &#123;</span><br><span class="line">	<span class="keyword">if</span> (logConditionCalculateConfigRela.containsKey(logConditionId)) &#123;</span><br><span class="line">		<span class="keyword">return</span> logConditionCalculateConfigRela.get(logConditionId);</span><br><span class="line">	&#125;</span><br><span class="line">	logConditionCalculateConfigRela.put(logConditionId, queryCalculateConfigIdByLogConditionIdFromDb(logConditionId));</span><br><span class="line">	<span class="keyword">return</span> logConditionCalculateConfigRela.get(logConditionId);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>总结：对于配置这种只读不写的场景，可以使用java集合实现缓存的效果；同时使用netty可以实现热更新，避免停服！</p>
+</blockquote>
+<h3 id="1-2-多读少写"><a href="#1-2-多读少写" class="headerlink" title="1.2 多读少写"></a>1.2 多读少写</h3><p>这种场景相对于 <strong>1.1</strong> 而言，其缓存数据是有可能改变的。因此基于上述设计，还需要对数据进行实时更改，因此其解决方案主要是使用哈希表来进行缓存，首先从缓存中读取数据，若未命中，再从DB中读取，无论存在与否，都会将其更新到缓存中去；同时当有数据发生改变，并进行入库操作时，在入库成功之后，需要将缓存中key对应的数据删去，以使应用读取最新的数据！同样，该种模式也可以使用netty来进行缓存清除！</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="string">"hello world"</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="1-3-多写少读"><a href="#1-3-多写少读" class="headerlink" title="1.3 多写少读"></a>1.3 多写少读</h3><p>这个场景正是当时我需求应该使用到的，但是当时想破脑袋都没发现合适的实现，后来在介入其他系统时发现，有相同的需求并附有实现…(虽然和我后面想的解决方案一致，哈哈哈(<em>^▽^</em>))这种场景主要应用于那种需要频繁对数据进行改变，但是受硬件条件影响(没错，就是服务器很吃紧)不得不使用缓存来提高读取效率，同时又得兼顾内存的开销。后面给出的解决方案就是使用LRUMap来对数据进行缓存，然后后续操作就和 <strong>1.2</strong> 类似了。LRU，意味着least recently used，即最小最近使用，你可以给这个map指定它的最大阈值，当当前map内的数据容量达到阈值时，会触发删除操作来腾出空间存储新的数据，而因为它本身维护了当前数据的使用顺序，会优先将不曾用过的数据给删除，从而实现缓存但又不占用过多内存的需求。LRUMap常用于这种多写少读场景，可以有效提升计算效率。但LRUMap存在的一个缺陷是，短时间内如果出现大量新数据，当达到阈值时他的缓存效果就消失了，一些热key也可能会被删除…与LRU对应的还有LFU，它是以使用频率来决定删除顺序的，这里就不再赘述了~</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="string">"hello world"</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="1-4-全写"><a href="#1-4-全写" class="headerlink" title="1.4 全写"></a>1.4 全写</h3><p>全写还用啥缓存呀，似不似撒~</p>
+<blockquote>
+<p>关于1.2、1.3的代码，等下次有时间再贴上来吧~</p>
+</blockquote>
 
     
 
@@ -261,7 +274,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="https://github.com/miracle-tree/2020/04/28/04-28历程/" title="04-28历程" target="_blank">https://github.com/miracle-tree/2020/04/28/04-28历程/</a>
+          <a href="https://github.com/miracle-tree/2020/06/21/缓存的几个常用使用场景/" title="缓存的几个常用使用场景" target="_blank">https://github.com/miracle-tree/2020/06/21/缓存的几个常用使用场景/</a>
         </li>
         
         <li>
@@ -278,6 +291,17 @@
   <div class="article-info article-info-index">
     
     
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
     
 
     
@@ -328,7 +352,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://github.com/miracle-tree/2020/04/28/04-28%E5%8E%86%E7%A8%8B/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://github.com/miracle-tree/2020/06/21/%E7%BC%93%E5%AD%98%E7%9A%84%E5%87%A0%E4%B8%AA%E5%B8%B8%E7%94%A8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -343,18 +367,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2020/04/29/write-in-Typora/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          write-in-Typora 
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/04/22/Desire/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Desire</div>
+    <a href="/2020/05/20/%E4%BB%A5%E6%AD%A4%E7%A5%AD%E5%A5%A0%E6%88%91%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E5%8D%95%E8%BA%AB520/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">以此祭奠我的最后一个单身520</div>
       <i class="icon-circle-right"></i>
     </a>
   

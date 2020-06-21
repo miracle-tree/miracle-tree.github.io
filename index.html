@@ -196,6 +196,110 @@
             
 
   
+    <article id="post-缓存的几个常用使用场景" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/06/21/%E7%BC%93%E5%AD%98%E7%9A%84%E5%87%A0%E4%B8%AA%E5%B8%B8%E7%94%A8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/" target="_blank">缓存的几个常用使用场景</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/06/21/%E7%BC%93%E5%AD%98%E7%9A%84%E5%87%A0%E4%B8%AA%E5%B8%B8%E7%94%A8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/" class="archive-article-date">
+        <time datetime="2020-06-21T03:00:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-21</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    1.1 配置缓存
+自工作以来，已经逐渐介入了公司的几个项目，主要以中间件为主，因此涉及到需要存储很多DB配置。而公司现有的解决方案，是使用哈希表来进行保存：先从哈希表中获取，若不存在，则从数据库中读取，并加载进内存。通过缓存可以减少对数据库的访问次数，提高计算效率。同时采用netty组件，通过http请求动态的清除缓存，从而达到不停服更新配置的功能(需要注意锁)！
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+
+if (logConditionCalculateConfigRela.containsKey(logConditionId)) {
+	return logConditionCalcu
+    
+    <a class="article-more-a" href="/2020/06/21/%E7%BC%93%E5%AD%98%E7%9A%84%E5%87%A0%E4%B8%AA%E5%B8%B8%E7%94%A8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/06/21/%E7%BC%93%E5%AD%98%E7%9A%84%E5%87%A0%E4%B8%AA%E5%B8%B8%E7%94%A8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-以此祭奠我的最后一个单身520" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1071,6 +1175,10 @@ user
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">GitHub</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
             
             <div class="clearfix"></div>
